@@ -9001,3 +9001,972 @@ Stack trace:
 REQUEST_URI=/en/deliveyInfo/create
 HTTP_REFERER=http://my.local/en/user/profile
 ---
+2014/02/08 22:50:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'web'@'localhost' (using password: YES)' in /home/hottern/sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/hottern/sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/hottern/sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/hottern/sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/hottern/sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/hottern/sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/hottern/sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(DeliveyInfo))
+#7 /home/hottern/sites/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/hottern/sites/delivery.int/protected/controllers/front/DeliveyInfoController.php(65): CActiveRecord->__construct()
+#9 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionCreate()
+#10 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('create')
+#19 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('deliveyInfo/cre...')
+#20 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#22 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#23 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#24 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#25 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#26 {main}
+REQUEST_URI=/deliveyInfo/create
+---
+2014/02/08 22:50:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#5 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#6 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/08 22:50:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#5 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#6 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/08 22:50:53 [error] [exception.CException] exception 'CException' with message 'Property "IndexController.navigation" is not defined.' in /home/hottern/sites/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/modules/admin/AdminModule.php(21): CComponent->__set('navigation', '//layouts/navig...')
+#1 /home/hottern/sites/framework/web/CController.php(263): AdminModule->beforeControllerAction(Object(IndexController), Object(CInlineAction))
+#2 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#3 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#4 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#6 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#7 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#8 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#9 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#10 {main}
+REQUEST_URI=/admin
+---
+2014/02/08 22:53:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'web'@'localhost' (using password: YES)' in /home/hottern/sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/hottern/sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/hottern/sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/hottern/sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/hottern/sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/hottern/sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/hottern/sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#7 /home/hottern/sites/framework/db/ar/CActiveRecord.php(212): CActiveRecord->getMetaData()
+#8 /home/hottern/sites/delivery.int/protected/modules/user/components/UserIdentity.php(27): CActiveRecord->__call('notsafe', Array)
+#9 /home/hottern/sites/delivery.int/protected/modules/user/components/UserIdentity.php(27): User->notsafe()
+#10 /home/hottern/sites/delivery.int/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#11 /home/hottern/sites/framework/validators/CInlineValidator.php(42): UserLogin->authenticate('password', Array)
+#12 /home/hottern/sites/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#13 /home/hottern/sites/framework/base/CModel.php(159): CValidator->validate(Object(UserLogin), NULL)
+#14 /home/hottern/sites/delivery.int/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#15 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#16 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#18 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#20 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#21 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#23 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#24 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#25 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#26 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#27 {main}
+REQUEST_URI=/user/login?0=admin%2Findex%2Flogin&language=en
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin&language=en
+---
+2014/02/08 23:02:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'web'@'localhost' (using password: YES)' in /home/hottern/sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/hottern/sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/hottern/sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/hottern/sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/hottern/sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/hottern/sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/hottern/sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#7 /home/hottern/sites/framework/db/ar/CActiveRecord.php(212): CActiveRecord->getMetaData()
+#8 /home/hottern/sites/delivery.int/protected/modules/user/components/UserIdentity.php(27): CActiveRecord->__call('notsafe', Array)
+#9 /home/hottern/sites/delivery.int/protected/modules/user/components/UserIdentity.php(27): User->notsafe()
+#10 /home/hottern/sites/delivery.int/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#11 /home/hottern/sites/framework/validators/CInlineValidator.php(42): UserLogin->authenticate('password', Array)
+#12 /home/hottern/sites/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#13 /home/hottern/sites/framework/base/CModel.php(159): CValidator->validate(Object(UserLogin), NULL)
+#14 /home/hottern/sites/delivery.int/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#15 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#16 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#18 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#20 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#21 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#23 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#24 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#25 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#26 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#27 {main}
+REQUEST_URI=/user/login?0=admin%2Findex%2Flogin&language=en
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin&language=en
+---
+2014/02/08 23:04:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'web'@'localhost' (using password: YES)' in /home/hottern/sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/hottern/sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/hottern/sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/hottern/sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/hottern/sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/hottern/sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/hottern/sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#7 /home/hottern/sites/framework/db/ar/CActiveRecord.php(212): CActiveRecord->getMetaData()
+#8 /home/hottern/sites/delivery.int/protected/modules/user/components/UserIdentity.php(27): CActiveRecord->__call('notsafe', Array)
+#9 /home/hottern/sites/delivery.int/protected/modules/user/components/UserIdentity.php(27): User->notsafe()
+#10 /home/hottern/sites/delivery.int/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#11 /home/hottern/sites/framework/validators/CInlineValidator.php(42): UserLogin->authenticate('password', Array)
+#12 /home/hottern/sites/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#13 /home/hottern/sites/framework/base/CModel.php(159): CValidator->validate(Object(UserLogin), NULL)
+#14 /home/hottern/sites/delivery.int/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#15 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#16 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#18 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#20 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#21 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#23 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#24 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#25 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#26 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#27 {main}
+REQUEST_URI=/user/login?language=en
+HTTP_REFERER=http://delivery.int/user/login?language=en
+---
+2014/02/08 23:04:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'web'@'localhost' (using password: YES)' in /home/hottern/sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/hottern/sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/hottern/sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/hottern/sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/hottern/sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/hottern/sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/hottern/sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#7 /home/hottern/sites/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/hottern/sites/delivery.int/protected/modules/user/controllers/RegistrationController.php(23): CActiveRecord->__construct()
+#9 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#10 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#15 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#17 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#18 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#19 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#20 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#21 {main}
+REQUEST_URI=/user/registration?language=en
+HTTP_REFERER=http://delivery.int/user/login?language=en
+---
+2014/02/08 23:05:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'delivery.tbl_company' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_company`.
+in /home/hottern/sites/delivery.int/protected/modules/admin/controllers/CompanyController.php (59)
+in /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php (25)
+in /home/hottern/sites/delivery.int/index.php (13)
+2014/02/08 23:05:36 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{company}}" for active record class "Company" cannot be found in the database.' in /home/hottern/sites/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /home/hottern/sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Company))
+#1 /home/hottern/sites/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/CompanyController.php(59): CActiveRecord->__construct('search')
+#3 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): CompanyController->actionIndex()
+#4 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/company/i...')
+#14 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#17 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#18 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#19 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#20 {main}
+REQUEST_URI=/admin/company/index/language/en
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin&language=en
+---
+2014/02/08 23:06:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1.
+in /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php (68)
+in /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php (21)
+in /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php (25)
+2014/02/08 23:06:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1' in /home/hottern/sites/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php(68): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#5 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#6 /home/hottern/sites/framework/web/CController.php(869): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#7 /home/hottern/sites/framework/web/CController.php(782): CController->renderPartial('profile', Array, true)
+#8 /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php(21): CController->render('profile', Array)
+#9 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): ProfileController->actionProfile()
+#10 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/profile')
+#15 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#17 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#18 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#19 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#20 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#21 {main}
+REQUEST_URI=/user/profile?language=en
+---
+2014/02/08 23:06:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1.
+in /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php (68)
+in /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php (21)
+in /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php (25)
+2014/02/08 23:06:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1' in /home/hottern/sites/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php(68): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#5 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#6 /home/hottern/sites/framework/web/CController.php(869): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#7 /home/hottern/sites/framework/web/CController.php(782): CController->renderPartial('profile', Array, true)
+#8 /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php(21): CController->render('profile', Array)
+#9 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): ProfileController->actionProfile()
+#10 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/profile')
+#15 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#17 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#18 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#19 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#20 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#21 {main}
+REQUEST_URI=/user/profile?language=en
+---
+2014/02/08 23:06:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1.
+in /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php (68)
+in /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php (21)
+in /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php (25)
+2014/02/08 23:06:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1' in /home/hottern/sites/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php(68): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#5 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#6 /home/hottern/sites/framework/web/CController.php(869): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#7 /home/hottern/sites/framework/web/CController.php(782): CController->renderPartial('profile', Array, true)
+#8 /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php(21): CController->render('profile', Array)
+#9 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): ProfileController->actionProfile()
+#10 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/profile')
+#15 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#17 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#18 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#19 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#20 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#21 {main}
+REQUEST_URI=/user/profile?language=en
+---
+2014/02/08 23:06:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1.
+in /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php (68)
+in /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php (21)
+in /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php (25)
+2014/02/08 23:06:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_user' in 'where clause'. The SQL statement executed was: SELECT * FROM `delivey_info` `t` WHERE id_user = 1' in /home/hottern/sites/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/hottern/sites/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /home/hottern/sites/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/hottern/sites/delivery.int/protected/modules/user/views/profile/profile.php(68): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#5 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#6 /home/hottern/sites/framework/web/CController.php(869): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#7 /home/hottern/sites/framework/web/CController.php(782): CController->renderPartial('profile', Array, true)
+#8 /home/hottern/sites/delivery.int/protected/modules/user/controllers/ProfileController.php(21): CController->render('profile', Array)
+#9 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): ProfileController->actionProfile()
+#10 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/hottern/sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/profile')
+#15 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#17 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#18 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#19 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#20 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#21 {main}
+REQUEST_URI=/user/profile?language=en
+---
+2014/02/08 23:06:53 [error] [exception.CException] exception 'CException' with message 'DeliveyInfoController cannot find the requested view "index".' in /home/hottern/sites/framework/web/CController.php:878
+Stack trace:
+#0 /home/hottern/sites/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(130): CController->render('index', Array)
+#2 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionIndex()
+#3 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#13 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#17 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#18 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/admin/deliveyInfo/index/language/en
+---
+2014/02/08 23:07:43 [error] [exception.CException] exception 'CException' with message 'DeliveyInfoController and its behaviors do not have a method or closure named "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): DeliveyInfoController->createMultilanguageReturnUrl('ru')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/front/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/front/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(130): CController->render('index', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionIndex()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#33 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#34 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#35 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#36 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#37 {main}
+REQUEST_URI=/admin/deliveyInfo/index/language/en
+---
+2014/02/08 23:07:56 [error] [exception.CException] exception 'CException' with message 'DeliveyInfoController and its behaviors do not have a method or closure named "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): DeliveyInfoController->createMultilanguageReturnUrl('ru')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/front/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/front/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(130): CController->render('index', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionIndex()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#33 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#34 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#35 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#36 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#37 {main}
+REQUEST_URI=/admin/deliveyInfo/index/
+---
+2014/02/08 23:08:35 [error] [exception.CException] exception 'CException' with message 'DeliveyInfoController and its behaviors do not have a method or closure named "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): DeliveyInfoController->createMultilanguageReturnUrl('ru')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/front/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/front/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(130): CController->render('index', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionIndex()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#33 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#34 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#35 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#36 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#37 {main}
+REQUEST_URI=/ru/admin/deliveyInfo/index/
+---
+2014/02/08 23:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/deliveyinfo".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyin...')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#5 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#6 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/ru/admin/deliveyinfo
+---
+2014/02/08 23:10:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/deliveyinfo".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyin...')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#5 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#6 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/ru/admin/deliveyinfo/create
+---
+2014/02/08 23:11:06 [error] [exception.CException] exception 'CException' with message 'В классе DeliveyInfoController и его поведениях не найден метод или замыкание с именем "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): DeliveyInfoController->createMultilanguageReturnUrl('zh_cn')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/front/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/front/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(130): CController->render('index', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionIndex()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#33 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#34 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#35 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#36 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#37 {main}
+REQUEST_URI=/ru/admin/deliveyInfo/create
+---
+2014/02/08 23:11:21 [error] [exception.CException] exception 'CException' with message 'Property "DeliveyInfo.id_user" is not defined.' in /home/hottern/sites/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/hottern/sites/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id_user')
+#1 /home/hottern/sites/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('id_user')
+#2 /home/hottern/sites/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(DeliveyInfo), 'id_user')
+#3 /home/hottern/sites/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(DeliveyInfo), 'id_user', Array)
+#4 /home/hottern/sites/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(DeliveyInfo), 'id_user', Array)
+#5 /home/hottern/sites/delivery.int/protected/modules/admin/views/deliveyInfo/_form.php(66): CActiveForm->textField(Object(DeliveyInfo), 'id_user')
+#6 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#7 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#8 /home/hottern/sites/framework/web/CController.php(869): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#9 /home/hottern/sites/delivery.int/protected/modules/admin/views/deliveyInfo/create.php(18): CController->renderPartial('_form', Array)
+#10 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#11 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#12 /home/hottern/sites/framework/web/CController.php(869): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#13 /home/hottern/sites/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(81): CController->render('create', Array)
+#15 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionCreate()
+#16 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#23 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#26 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#28 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#29 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#30 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#31 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#32 {main}
+REQUEST_URI=/admin/deliveyInfo/create
+---
+2014/02/08 23:13:06 [error] [exception.CException] exception 'CException' with message 'DeliveyInfoController and its behaviors do not have a method or closure named "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): DeliveyInfoController->createMultilanguageReturnUrl('ru')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/front/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/front/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(81): CController->render('create', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionCreate()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('create')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#33 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#34 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#35 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#36 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#37 {main}
+REQUEST_URI=/admin/deliveyInfo/create
+---
+2014/02/08 23:13:08 [error] [exception.CException] exception 'CException' with message 'DeliveyInfoController and its behaviors do not have a method or closure named "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): DeliveyInfoController->createMultilanguageReturnUrl('ru')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/front/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/front/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(81): CController->render('create', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionCreate()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('create')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(25): CApplication->run()
+#33 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#34 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#35 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#36 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#37 {main}
+REQUEST_URI=/admin/deliveyInfo/create
+---
+2014/02/08 23:35:12 [error] [exception.CException] exception 'CException' with message 'The view path "/home/hottern/sites/delivery.int/protected/views/front" is not a valid directory.' in /home/hottern/sites/framework/web/CWebApplication.php:444
+Stack trace:
+#0 /home/hottern/sites/framework/base/CComponent.php(152): CWebApplication->setViewPath('/home/hottern/s...')
+#1 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(40): CComponent->__set('viewPath', '/home/hottern/s...')
+#2 /home/hottern/sites/framework/base/CComponent.php(561): WebApplicationEndBehavior->changeModulePaths(Object(CEvent))
+#3 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(32): CComponent->raiseEvent('onModuleCreate', Object(CEvent))
+#4 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(23): WebApplicationEndBehavior->onModuleCreate(Object(CEvent))
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#7 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#8 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/admin/deliveyInfo/index/language/ru
+---
+2014/02/08 23:35:14 [error] [exception.CException] exception 'CException' with message 'The view path "/home/hottern/sites/delivery.int/protected/views/front" is not a valid directory.' in /home/hottern/sites/framework/web/CWebApplication.php:444
+Stack trace:
+#0 /home/hottern/sites/framework/base/CComponent.php(152): CWebApplication->setViewPath('/home/hottern/s...')
+#1 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(40): CComponent->__set('viewPath', '/home/hottern/s...')
+#2 /home/hottern/sites/framework/base/CComponent.php(561): WebApplicationEndBehavior->changeModulePaths(Object(CEvent))
+#3 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(32): CComponent->raiseEvent('onModuleCreate', Object(CEvent))
+#4 /home/hottern/sites/delivery.int/protected/components/WebApplicationEndBehavior.php(23): WebApplicationEndBehavior->onModuleCreate(Object(CEvent))
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 /home/hottern/sites/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#7 /home/hottern/sites/delivery.int/index.php(13): CComponent->__call('runEnd', Array)
+#8 /home/hottern/sites/delivery.int/index.php(13): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/admin/deliveyInfo/index/language/ru
+---
+2014/02/08 23:37:16 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CAttributeCollection.languages".' in /home/hottern/sites/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/hottern/sites/framework/collections/CAttributeCollection.php(51): CComponent->__get('languages')
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(7): CAttributeCollection->__get('languages')
+#2 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#3 /home/hottern/sites/delivery.int/protected/views/layouts/main.php(23): CBaseController->widget('application.com...')
+#4 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#5 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#6 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#7 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#8 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /home/hottern/sites/delivery.int/protected/views/layouts/column2.php(11): CBaseController->endContent()
+#12 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#14 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#15 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/DeliveyInfoController.php(130): CController->render('index', Array)
+#16 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): DeliveyInfoController->actionIndex()
+#17 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#27 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#28 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/admin/deliveyInfo/index/language/ru
+---
+2014/02/08 23:40:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://delivery.int/admin/deliveyInfo/index/language/en
+---
+2014/02/08 23:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/page/view/strahovanie".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/site/page/view/strahovanie
+---
+2014/02/08 23:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "StatusInfo".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('StatusInfo')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/StatusInfo
+HTTP_REFERER=http://delivery.int/admin/deliveyInfo/index/language/en
+---
+2014/02/08 23:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "StatusInfo/index".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('StatusInfo/inde...')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/StatusInfo/index
+---
+2014/02/08 23:42:56 [error] [exception.CException] exception 'CException' with message 'StatusInfoController and its behaviors do not have a method or closure named "createMultilanguageReturnUrl".' in /home/hottern/sites/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): CComponent->__call('createMultilang...', Array)
+#1 /home/hottern/sites/delivery.int/protected/components/widgets/views/languageSelector.php(9): StatusInfoController->createMultilanguageReturnUrl('ru')
+#2 /home/hottern/sites/framework/web/CBaseController.php(130): require('/home/hottern/s...')
+#3 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, false)
+#4 /home/hottern/sites/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/hottern/s...', Array, false)
+#5 /home/hottern/sites/delivery.int/protected/components/widgets/LanguageSelector.php(8): CWidget->render('languageSelecto...', Array)
+#6 /home/hottern/sites/framework/web/CBaseController.php(173): LanguageSelector->run()
+#7 /home/hottern/sites/delivery.int/protected/views/layouts/main.php(23): CBaseController->widget('application.com...')
+#8 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#9 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#10 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#11 /home/hottern/sites/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('?<div class="sp...')
+#12 /home/hottern/sites/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="sp...')
+#13 /home/hottern/sites/framework/web/CBaseController.php(206): COutputProcessor->run()
+#14 /home/hottern/sites/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#15 /home/hottern/sites/delivery.int/protected/views/layouts/column2.php(11): CBaseController->endContent()
+#16 /home/hottern/sites/framework/web/CBaseController.php(126): require('/home/hottern/s...')
+#17 /home/hottern/sites/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/hottern/s...', Array, true)
+#18 /home/hottern/sites/framework/web/CController.php(784): CBaseController->renderFile('/home/hottern/s...', Array, true)
+#19 /home/hottern/sites/delivery.int/protected/modules/admin/controllers/StatusInfoController.php(128): CController->render('index', Array)
+#20 /home/hottern/sites/framework/web/actions/CInlineAction.php(49): StatusInfoController->actionIndex()
+#21 /home/hottern/sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/hottern/sites/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/hottern/sites/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#30 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/StatusInf...')
+#31 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/admin/StatusInfo/index
+---
+2014/02/08 23:44:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "StatusInfo/index".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('StatusInfo/inde...')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/StatusInfo/index
+---
+2014/02/08 23:44:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "StatusInfo".' in /home/hottern/sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('StatusInfo')
+#1 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/StatusInfo
+HTTP_REFERER=http://delivery.int/admin/deliveyInfo/index/language/en
+---
+2014/02/08 23:52:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---
+2014/02/08 23:52:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---
+2014/02/08 23:52:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---
+2014/02/08 23:52:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---
+2014/02/08 23:52:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---
+2014/02/08 23:52:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---
+2014/02/08 23:52:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+---
+2014/02/08 23:53:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/hottern/sites/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/hottern/sites/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/hottern/sites/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/hottern/sites/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/hottern/sites/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/hottern/sites/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/hottern/sites/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/hottern/sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/hottern/sites/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /home/hottern/sites/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/deliveyIn...')
+#9 /home/hottern/sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/hottern/sites/delivery.int/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/deliveyInfo/index
+HTTP_REFERER=http://delivery.int/user/login?0=admin%2Findex%2Flogin
+---

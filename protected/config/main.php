@@ -65,6 +65,7 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+        'admin',
 
 	),
     'controllerMap'=>array(
@@ -76,7 +77,7 @@ return array(
 			// enable cookie-based authentication
             'class' => 'WebUser',
             'allowAutoLogin'=>true,
-            'loginUrl' => array('/user/login'),
+            'loginUrl' => array('/user/login', 'admin/index/login'),
 		),
         'bootstrap'=>array(
             'class'=>'bootstrap.components.Bootstrap',
@@ -88,7 +89,16 @@ return array(
         'urlManager'=>array(
             'urlFormat'=>'path',
             'showScriptName'=>false,
-
+            'rules'=>array(
+                '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<language:(ru|zh_cn|en)>/' => 'site/index',
+                '<language:(ru|zh_cn|en)>/<action:(contact|login|logout)>/*' => 'site/<action>',
+                '<language:(ru|zh_cn|en)>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<language:(ru|zh_cn|en)>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<language:(ru|zh_cn|en)>/<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+        ),
         ),
 
 		/*'db'=>array(
@@ -99,8 +109,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=delivery',
 			'emulatePrepare' => true,
-			'username' => 'web',
-			'password' => 'webdb',
+			'username' => 'root',
+			'password' => '123',
 			'charset' => 'utf8',
             'tablePrefix' => 'tbl_',
 		),
@@ -131,5 +141,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+        'languages'=>array('ru'=>'Русский', 'zh_cn'=>'Chinese', 'en'=>'English'),
 	),
 );
