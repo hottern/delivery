@@ -1,0 +1,6 @@
+tags
+*.swp
+site/protected/config/main.php
+site/protected/config/console.php
+site/protected/config/test.php
+nbproject/*
