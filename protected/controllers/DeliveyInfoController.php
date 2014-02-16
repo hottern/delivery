@@ -66,7 +66,6 @@ class DeliveyInfoController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['DeliveyInfo']))
 		{
 			$model->attributes=$_POST['DeliveyInfo'];
@@ -86,17 +85,14 @@ class DeliveyInfoController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['DeliveyInfo']))
 		{
 			$model->attributes=$_POST['DeliveyInfo'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -110,7 +106,6 @@ class DeliveyInfoController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
@@ -123,7 +118,6 @@ class DeliveyInfoController extends Controller
 	{
         $data = array();
         $data["myValue"] = "Данные загружены";
-
         $this->render('find', $data);
 	}
 
@@ -136,7 +130,6 @@ class DeliveyInfoController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['DeliveyInfo']))
 			$model->attributes=$_GET['DeliveyInfo'];
-
 		$this->render('admin',array(
 			'model'=>$model,
 		));
@@ -174,10 +167,6 @@ class DeliveyInfoController extends Controller
 
     public function ActionFindByCode()
     {
-        var_dump($_GET);
-       // $model=new DeliveyInfo;
-       /* $posts=DeliveyInfo::model()->findAllBySql("select * from deliveyinfo where code
-like '%:keyword%'", array(':keyword'=>$_POST['Text']));*/
         $this->render('_find');
     }
 
@@ -186,13 +175,11 @@ like '%:keyword%'", array(':keyword'=>$_POST['Text']));*/
     {
         $data = array();
         $data["myValue"] = "Данные загружены";
-
         $this->render('find', $data);
     }
 
     public function actionUpdateAjax()
     {
-       // var_dump($_POST);
         $model=new DeliveyInfo();
         $rows =Yii::app()->db->createCommand()
             ->select('fio, date, adress, status_name')
@@ -200,66 +187,8 @@ like '%:keyword%'", array(':keyword'=>$_POST['Text']));*/
             ->join('status_info p', 'u.status_id=p.status_id')
             ->where('code=:code', array(':code'=>$_POST['word']))
             ->queryRow();
-
         $this->renderPartial('_ajaxContent',array(
             'model'=>$model,'rows'=>$rows,
         ));
-
-       /* //wczytanie modelu zawierjącego funkcje
-        //do obsługi tabeli 'words'
-        $model = new DeliveyInfo('search');
-
-        //definicja tablicy, którą będziemy
-        //zwracać w odpowiedzi na zapytanie
-        $response = array(
-            'status' => 'ok',
-            'message' => array(),
-        );
-
-        //pobranie słowa przesłanego POST'em
-        $word = $this->input->post('word',true);
-
-        //walidacja
-        if (empty($word)) {
-            $response['status'] = 'errors';
-            $response['message']['empty'] = 'Uzupełnij słowo';
-        }
-
-        if (strlen($word) > 255) {
-            $response['status'] = 'errors';
-            $response['message']['too_long'] = 'Słowo jest za długie';
-        }
-
-        //sprawdzenie czy słowo istnieje w bazie danych
-        if ($this->words->check($word)) {
-            $response['status'] = 'errors';
-            $response['message']['word_exist'] = 'Słowo znajduje się już w bazie danych';
-        }
-
-        //jeżeli do tej pory nie wystąpiły błędy
-        //to możemy zapisać słowo w bazie danych
-        if ($response['status']=='ok') {
-
-            //dodajemy słowo do bazy i otrzymujemy
-            //id jakie zostało mu nadane
-            $id = $this->words->add($word);
-
-            if ($id > 0) {
-                //ID jest liczbą naturalną większą od 0
-                //co oznacza, że wszystko poszło dobrze
-                $response['message']['ok'] = 'Słowo zostało zapisane w bazie danych i otrzymało ID '.$id;
-            } else {
-                //w przypadku niepowodzenia funkcja add
-                //może zwrocić wartość false
-                //np. gdy nie uda się połączyć z bazą danych
-                $response['status'] = 'errors';
-                $response['message']['database'] = 'Wystąpił błąd bazy danych - nie udało się dodać słowa';
-            }
-
-        }
-
-        //w odpowiedzi zwracamy obiekt typu JSON
-        //i kończymy działanie skryptu
-        die(json_encode($response));*/
     }
 }
